@@ -10,8 +10,8 @@ import com.example.entities.Adviser;
 public interface AdviserRepository extends JpaRepository<Adviser, Long> {
 
 	@Query("SELECT count(e) FROM Adviser e  WHERE e.dni_As=?1")
-	int verificarExistenciaAdviser(String dni_As);
+	int verificarExistenciaAdviser(Long dni_As);
 	
 	@Query("SELECT e FROM Adviser e  WHERE e.dni_As=?1")
-	List<Adviser> buscarAdviserPorDNI(String dni_As);
+	List<Adviser> buscarAdviserPorDNI(Long dni_As);
 }

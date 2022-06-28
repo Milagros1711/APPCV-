@@ -25,7 +25,7 @@ public class AdviserService{
 	
 	
 	public int registrarAdvisers(Adviser adviser) {
-		int existeAdviser=adviserRepository.verificarExistenciaAdviser(adviser.getDni_As());
+		int existeAdviser=adviserRepository.verificarExistenciaAdviser(adviser.getDni());
 		
 		if(existeAdviser==0)
 			adviserRepository.save(adviser);
@@ -34,7 +34,7 @@ public class AdviserService{
 	}
 	
 	
-	public List<Adviser> buscarAdviserPorDni(String Dni_As){
+	public List<Adviser> buscarAdviserPorDni(Long Dni_As){
 		
 		List<Adviser> advisers=adviserRepository.buscarAdviserPorDNI(Dni_As);
 		

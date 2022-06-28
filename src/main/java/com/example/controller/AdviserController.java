@@ -64,7 +64,7 @@ public class AdviserController {
 	
 	@PostMapping("/buscar")
 	public String buscarEmpresa(Model model, @ModelAttribute Adviser adviser) {		
-		model.addAttribute("advisers",adviserService.buscarAdviserPorDni(adviser.getDni_As()));
+		model.addAttribute("advisers",adviserService.buscarAdviserPorDni(adviser.getDni()));
 		return "Adviser/list";
 	}
 	
